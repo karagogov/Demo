@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RidecellDemo</string>
+    <string name="userName">userName</string>
+    <string name="title">title</string>
+    <string name="subtitle">subtitle</string>
+</resources>

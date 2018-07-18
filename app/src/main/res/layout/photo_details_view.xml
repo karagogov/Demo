@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="modelView"
+            type="com.example.dimitare.ridecelldemo.PhotoDetailViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:text="@{modelView.userName}"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:text="@string/userName"
+                android:padding="15dp"/>
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:imageUrl="@{modelView.imageUrl}"/>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:text="@{modelView.title}"
+                android:padding="15dp"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:text="@string/title"/>
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:text="@{modelView.subtitle}"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:text="@string/subtitle"/>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>
